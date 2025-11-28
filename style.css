@@ -1,0 +1,72 @@
+:root {
+  --main-color: #fff;
+  --secondary-color: #ffa;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* #region Header */
+
+.header {
+
+}
+
+.header-title {
+
+}
+
+.header-links {
+
+}
+
+.header-link {
+
+}
+
+/* #endrehion */
+
+/* #region Main */
+
+.main {
+
+}
+
+/* #region gallery */
+
+.gallery {
+
+}
+
+.gallery-title {
+
+}
+
+.gallery-imgs {
+
+}
+
+.gallery-img {
+
+}
+
+/* #endrehion */
+
+/* #region contacts */
+
+.contacts {
+
+}
+
+.contacts-links {
+
+}
+
+
+
+/* #endrehion */
+
+/* #endrehion */
