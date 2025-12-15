@@ -4,17 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Painter</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="header">
       <h1 class="header-title">Авторські картини від Сергія</h1>
 
-      <nav class="header-links">
-        <a class="header-link" href="#aboutMe">Про мене</a>
-        <a class="header-link" href="#gallery">Галерея</a>
-        <a class="header-link" href="#contacts">Контакти</a>
-      </nav>
+      <div class="header-links-container">
+        <nav class="header-links">
+          <a class="header-link" href="#aboutMe">Про мене</a>
+          <a class="header-link" href="#contacts">Контакти</a>
+        </nav>
+        <div class="header-button-container">
+          <button
+            id="gallery-button"
+            class="header-button"
+            aria-expanded="false"
+            aria-controls="gallery-list"
+          >
+            Галерея ↓
+          </button>
+          <ul id="gallery-list" class="header-button-lists" aria-hidden="true">
+            <li class="header-button-list"><button id="Усі">Усі</button></li>
+            <li class="header-button-list">
+              <button id="Пейзаж">Пейзаж</button>
+            </li>
+            <li class="header-button-list">
+              <button id="Місто">Місто</button>
+            </li>
+            <li class="header-button-list">
+              <button id="Натюрморт">Натюрморт</button>
+            </li>
+            <li class="header-button-list">
+              <button id="Космос">Космос</button>
+            </li>
+            <li class="header-button-list">
+              <button id="Портрет">Портрет</button>
+            </li>
+            <li class="header-button-list">
+              <button id="Прованс">Прованс</button>
+            </li>
+            <li class="header-button-list">
+              <button id="Тварини">Тварини</button>
+            </li>
+            <li class="header-button-list"><button id="Море">Море</button></li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main class="main">
@@ -41,8 +85,14 @@
       </section>
 
       <section class="contacts" id="contacts">
+        <h2 class="contacts-title">Для зв'язку зі мною</h2>
         <div class="contacts-links">
-          <a class="contacts-link-tel" href="tel:+380931473587">+38 (093) 147-35-87</a>
+          <p class="contacts-links-text">
+            Мій телефон:
+            <a class="contacts-link-tel" href="tel:+380931473587"
+              >+38 (093) 147-35-87</a
+            >
+          </p>
           <a
             class="contacts-link-instagram"
             href="https://www.instagram.com/franshchaksergei?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
@@ -70,8 +120,15 @@
       </section>
     </main>
 
-    <div id="modal" class="modal hidden">
+    <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
       <div class="modal-content">
+        <button
+          id="close-modal"
+          class="modal-close"
+          aria-label="Закрити (Escape)"
+        >
+          ✕
+        </button>
         <button id="prev" class="nav-btn-left">←</button>
 
         <img id="modal-img" />
